@@ -9,7 +9,6 @@ print("Your first variable is:", first)
 print("Your second variable is:", second)
 print("Your fird variable is:", third)
 '''
-
 from sys import argv
 
 script_name, user_name = argv
