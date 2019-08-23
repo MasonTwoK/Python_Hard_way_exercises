@@ -24,7 +24,9 @@ script, file_name = argv
 
 txt = open(file_name)
 print(f"File {file_name} contains:\n" + txt.read())
+file_name.close()
 
 ins_file = input("Enter name of file for open it:\n> ")
-int_txt = open(ins_file)
-print(int_txt.read())
+ins_txt = open(ins_file)
+print(ins_txt.read())
+ins_txt.close()
