@@ -6,6 +6,7 @@ truncate - Empties the file.
 write('stuff') - Writes "stuff" to file
 seek(0) - Move the read/write location to beginning of the file. 
 '''
+'''
 from sys import argv
 
 script, filename = argv
@@ -41,3 +42,35 @@ target = open(filename)
 print(target.read())
 print("And finally, we close it.")
 target.close()
+'''
+
+# Rewrite of exercise 16
+
+from sys import argv
+
+script, file_name = argv
+
+print(f"We are going to erase {file_name}")
+print('''
+If you don;t want that, hit CTRL-C\n
+If you do want that, hit RETURN.\n >
+''')
+
+print("Opening the file...")
+fo = open(file_name, 'w')
+
+print("Truncating the file. Goodbye!")
+fo.truncate()
+
+print("Now I'm going to ask you for three lines.")
+line1 = input("line 1: ")
+line2 = input("line 2: ")
+line3 = input("line 3: ")
+
+print("I'm going to write these to the file.")
+fo.write(
+line1 + "\n" + line2 + "\n" + line3 + "\n"
+)
+
+print("And finally, we close it.")
+fo.close()
