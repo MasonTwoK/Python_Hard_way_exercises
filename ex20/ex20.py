@@ -49,6 +49,8 @@ def rewinder_line_returner(file, number_of_lines):
     for line_number in range(0, number_of_lines):
         print(line_number + 1, file.readline())
 
+
+
 file_returner(file_obj)
 print()
 rewinder_line_returner(file_obj, 3)
