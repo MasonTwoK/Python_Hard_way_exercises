@@ -27,23 +27,19 @@ main(languages, input_encoding, error)
 
 import sys
 
-script, lang_file = sys.argv
+script, txt_file = sys.argv
 
-def main(file_ob, form, error):
-    file_line = file_ob.readline()
+def main(ob_f, encoding, er):
+    string_printer(ob_f, encoding, er)
+    return main(ob_f, encode, error)
 
-    if file_line:
-        line_printer(file_line, lform = form, lerror = error)    
-        return main(file_ob, form, error)
+def string_printer(ob, encode, err):
+    single_string = ob.readline()
+    raw_byte = single_string.encode(encoding=encode, errors=err)
+    cooked_byte = single_string.decode(encode, errors=err)
 
-def line_printer(line, lform, lerror):
-    final_line = line.strip()
-    raw_byte = final_line.encode(lform, lerror)
-    cooked_byte = raw_byte.decode(lform, lerror)
-    
-    print(f"{raw_byte} <===> {cooked_byte}")
+    print(cooked_byte, "<===>", raw_byte)
 
 
-languges = open(lang_file, encoding = "utf-8")
-main(languges, "utf-8", "strict")
-
+obj_file = open(txt_file, encoding="utf-8")
+main(obj_file, "utf-8", "strict")
