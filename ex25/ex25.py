@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 '''
+=======
+>>>>>>> 7566c7243e015e46dc45155f5c1c49fad0a3a3f5
 def break_words(stuff):
     """This function will break up words for us."""
     word = stuff.split(' ')
@@ -33,6 +36,7 @@ def print_first_and_last_sorted(sentence):
     words = sort_sentence(sentence)
     print_first_word(words)
     print_last_word(words)
+<<<<<<< HEAD
 '''
 
 
@@ -57,3 +61,5 @@ def print_first_and_last(sentence):
     first = words.pop(0)
     last = words.pop(-1)
     print("First: {}\n Last: {}".format(first,last))
+=======
+>>>>>>> 7566c7243e015e46dc45155f5c1c49fad0a3a3f5
