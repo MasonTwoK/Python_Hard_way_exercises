@@ -1,3 +1,4 @@
+'''
 def break_words(stuff):
     """This function will break up words for us."""
     word = stuff.split(' ')
@@ -32,3 +33,27 @@ def print_first_and_last_sorted(sentence):
     words = sort_sentence(sentence)
     print_first_word(words)
     print_last_word(words)
+'''
+
+
+def break_to_words(sent):
+    words = sent.rsplit()
+    return words
+
+def sorted_words(words):
+    word_in_order = sorted(words)
+    return word_in_order
+
+def print_first_word(words):
+    first_word = words.pop(0)
+    print("First word: ", first_word)
+
+def print_last_word(words):
+    last_word = words.pop(-1)
+    print("Last word: {}".format(last_word))
+
+def print_first_and_last(sentence):
+    words = break_to_words(sentence)
+    first = words.pop(0)
+    last = words.pop(-1)
+    print("First: {}\n Last: {}".format(first,last))
