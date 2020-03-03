@@ -1,20 +1,38 @@
 #Inheritance
 #Alter Before or After
 
-class Parent(object):
+# class Parent(object):
+
+    # def altered(self):
+        # print("PARENT altered()")
+
+# class Child(Parent):
+
+    # def altered(self):
+        # print("CHILD, BEFORE PARENT altered()")
+        # super(Child, self).altered()
+        # print("CHILD, ARTER PARENT altered()")
+
+# dad = Parent()
+# son = Child()
+
+# dad.altered()
+# son.altered()
+
+class Father(object):
 
     def altered(self):
-        print("PARENT altered()")
+        print("Call of altered function in Father class")
 
-class Child(Parent):
+class Son(Father):
 
     def altered(self):
-        print("CHILD, BEFORE PARENT altered()")
-        super(Child, self).altered()
-        print("CHILD, ARTER PARENT altered()")
+        print("Line before altered in Son class")
+        super(Son, self).altered()
+        print("Line after altered in Son class")
 
-dad = Parent()
-son = Child()
+obj1 = Father()
+obj2 = Son()
 
-dad.altered()
-son.altered()
+obj1.altered()
+obj2.altered()
