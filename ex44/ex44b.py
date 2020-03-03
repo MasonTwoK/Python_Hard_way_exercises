@@ -1,10 +1,10 @@
 #Inheritence
 #Override Explicity
 
-# class Parent(object):
+ class Parent(object):
     
-    # def override(self):
-        # print("PARENT override()")
+     def override(self):
+         print("PARENT override()")
 
 class Child(Parent):
 
