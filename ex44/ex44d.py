@@ -34,3 +34,13 @@ print()
 
 dad.altered()
 son.altered()
+print()
+
+# class Child(Parent):
+
+    # def __init__(self, stuff)
+        # self.stuff = stuff
+        # super(Child. self).__init__()
+
+# class SuperFun(Chlid, BadStuff):
+    # pass
